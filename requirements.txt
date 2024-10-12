@@ -1,0 +1,8 @@
+numpy
+tensorflow
+matplotlib
+flask
+requests
+seaborn
+flask_mysqldb
+Flask-sqlalchemy

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bagel Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("/static/images/homepageBackground2.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            background-color: #ececec; 
+            padding: 30px;
+            border-radius: 20px; /* More rounded corners */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #000000; 
+            font-size: 2.5em; /* Larger and bolder */
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.2em;
+            margin: 10px 0;
+            line-height: 1.6; /* Adds spacing between lines */
+        }
+
+        .clues-container {
+            margin: 20px 0;
+        }
+
+        .clue-term {
+            font-weight: bold;
+            color: #000000; /* Matches the header */
+        }
+
+        .clue-explanation {
+            color: #000000;
+            font-style: italic;
+            margin-left: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #51def7;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px; /* Rounded buttons */
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #27bcd6;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bagel Game</h1>
+        <p>I am thinking of a three-digit number. Try to guess what it is!</p>
+
+        <div class="clues-container">
+            <p>Here are some clues:</p>
+            <div class="clue">
+                <span class="clue-term">Pico:</span> 
+                <span class="clue-explanation">One digit is correct but in the wrong position.</span>
+            </div>
+            <div class="clue">
+                <span class="clue-term">Fermi:</span> 
+                <span class="clue-explanation">One digit is correct and in the right position.</span>
+            </div>
+            <div class="clue">
+                <span class="clue-term">Bagels:</span> 
+                <span class="clue-explanation">No digit is correct.</span>
+            </div>
+        </div>
+
+        <form action="/start" method="GET">
+            <input type="submit" value="Start Game!">
+        </form>
+    </div>
+</body>
+</html>
